@@ -15,10 +15,7 @@ h3 {
     display: grid;
     grid-template-columns: 130px auto;
     align-items: center;
-    border-bottom: #5b5b5b solid 1px;
-   
-
-    
+    border-bottom: #5b5b5b solid 1px;    
 }
 
 .logo {
@@ -26,7 +23,6 @@ h3 {
     margin-right: 30px;
     padding: auto;
     margin-left: 10px;
-
 }
 
 
@@ -34,17 +30,14 @@ form {
     align-items: left;
     display: grid;
     grid-template-columns: 420px 125px;
-    align-items: center;
 }
 
 .searchbar {
     height: 35px;
     width: 400px;
     margin-right: 20px;
-    border-style: solid;
+    border: 1px solid #c4c4c4;
     border-radius: 20px;
-    border-width: 1px;
-    border-color: #c4c4c4;
     color: #5b5b5b;
     padding: 0%;
 }
@@ -52,8 +45,7 @@ form {
 button {
     height: 40px;
     background-color: #4285f3;
-    border-style: solid;
-    border-color: #1a5fd0;
+    border: solid #c4c4c4;
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -70,12 +62,12 @@ button {
     padding-top: 30px;
 }
 
-
-.body {
+.main {
     display: block;
     padding-left: 140px;
     padding-top: 30px;
 }
+
 ul {
     padding: 0%; 
 }
@@ -83,6 +75,7 @@ ul {
 li {
     display: inline;
     font-size: 12px;
+    margin-right: 10px;
 }
 
 button:hover {
@@ -91,7 +84,6 @@ button:hover {
 
 a:link {
     color: #1a0dab
-
 }
 
 a:active {
