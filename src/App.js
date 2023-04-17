@@ -1,25 +1,93 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div class="header">
+        <img class="logo" src="google.png" />
+        <form>
+          <input class="searchbar" type="text" />
+          <button>Search</button>
+        </form>
+      </div>
+      <div class="main">
+        <span class="nresults">37 Results</span>
+        <div class="results">
+          <span>www.w3schools.com</span>
+          <a href="this.link.com" target="_blank">
+            <h3>Javascript Tutorial - W3 School</h3>
+          </a>
+          <p>Well Organized and easy to Understand Coding</p>
+          <ul>
+            <li>
+              <a href="abc.com" target="_blank">
+                Javascript Intro
+              </a>
+            </li>
+            <li>
+              <a href="abc.com" target="_blank">
+                JS Functions
+              </a>
+            </li>
+            <li>
+              <a href="abc.com" target="_blank">
+                Javascript Examples
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="results">
+          <span>www.w3schools.com</span>
+          <a href="this.link.com" target="_blank">
+            <h3>Javascript Tutorial - W3 School</h3>
+          </a>
+          <p>Well Organized and easy to Understand Coding</p>
+          <ul>
+            <li>
+              <a href="abc.com" target="_blank">
+                Javascript Intro
+              </a>
+            </li>
+            <li>
+              <a href="abc.com" target="_blank">
+                JS Functions
+              </a>
+            </li>
+            <li>
+              <a href="abc.com" target="_blank">
+                Javascript Examples
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="results">
+          <span>www.w3schools.com</span>
+          <a href="this.link.com" target="_blank">
+            <h3>Javascript Tutorial - W3 School</h3>
+          </a>
+          <p>Well Organized and easy to Understand Coding</p>
+          <ul>
+            <li>
+              <a href="abc.com" target="_blank">
+                Javascript Intro
+              </a>
+            </li>
+            <li>
+              <a href="abc.com" target="_blank">
+                JS Functions
+              </a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/" target="_blank">
+                Javascript Examples
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
