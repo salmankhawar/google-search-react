@@ -4,16 +4,16 @@ import './App.css'
 function App() {
   return (
     <>
-      <div class="header">
-        <img class="logo" src="google.png" />
+      <div className="header">
+        <img className="logo" src="google.png" />
         <form>
-          <input class="searchbar" type="text" />
+          <input className="searchbar" type="text" />
           <button>Search</button>
         </form>
       </div>
-      <div class="main">
-        <span class="nresults">37 Results</span>
-        <div class="results">
+      <div className="main">
+        <span className="nresults">37 Results</span>
+        <div className="results">
           <span>www.w3schools.com</span>
           <a href="this.link.com" target="_blank">
             <h3>Javascript Tutorial - W3 School</h3>
@@ -37,7 +37,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <div class="results">
+        <div className="results">
           <span>www.w3schools.com</span>
           <a href="this.link.com" target="_blank">
             <h3>Javascript Tutorial - W3 School</h3>
@@ -61,7 +61,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <div class="results">
+        <div className="results">
           <span>www.w3schools.com</span>
           <a href="this.link.com" target="_blank">
             <h3>Javascript Tutorial - W3 School</h3>
