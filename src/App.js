@@ -7,6 +7,7 @@ function App() {
   // States
 
   const [results, setResults] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
 
   // Data
 
@@ -27,7 +28,8 @@ function App() {
       ],
     },
   ]
-
+  // Functions
+  // Search Function
   function search(string) {
     let filteredResults = data.filter(
       (n) =>
@@ -37,13 +39,24 @@ function App() {
     )
     setResults(filteredResults)
   }
+  // Search Term Submission
+  function sendForm(e) {
+    let keyword = ''
+    e.preventDefault()
+    keyword = e.target.keyword.value
+
+    setSearchTerm(keyword)
+    search(searchTerm)
+  }
+
+  //Return
 
   return (
     <>
       <div className="header">
         <img className="logo" src="google.png" />
-        <form>
-          <input className="searchbar" type="text" />
+        <form onSubmit={(e) => sendForm(e)}>
+          <input className="searchbar" type="text" name="keyword" />
           <button>Search</button>
         </form>
       </div>
