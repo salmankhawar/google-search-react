@@ -1,6 +1,6 @@
-export default function Result({ element }) {
+export default function Result({ element, i }) {
   return (
-    <div className="results">
+    <div key={i} className="results">
       <span>{element.url}</span>
       <a href={element.url} target="_blank">
         <h3>{element.title}</h3>
