@@ -1,7 +1,10 @@
 import logo from './logo.svg'
 import './App.css'
 import Results from './Results'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
+// axios.defaults.withCredentials = true
 
 function App() {
   // States
@@ -9,45 +12,31 @@ function App() {
   const [results, setResults] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
 
-  // Data
-
-  let data = [
-    {
-      title: 'JS tutorials',
-      description: 'The best JavaScript tutorials in the galaxy!',
-      url: 'https://www.w3schools.com',
-      links: [
-        {
-          title: 'JS for Beginners',
-          url: 'https://www.w3schools.com/js',
-        },
-        {
-          title: 'JS for the Web',
-          url: 'https://www.w3schools.com/js',
-        },
-      ],
-    },
-  ]
   // Functions
-  // Search Function
-  function search(string) {
-    let filteredResults = data.filter(
-      (n) =>
-        n.url.toLowerCase().includes(string.toLowerCase()) ||
-        n.description.toLowerCase().includes(string.toLowerCase()) ||
-        n.title.toLowerCase().includes(string.toLowerCase())
+
+  async function getData() {
+    let data = await axios.get(
+      'https://project-google-search-api-demo.herokuapp.com/results',
+      {
+        params: {
+          search: searchTerm,
+        },
+      }
     )
-    setResults(filteredResults)
+    setResults(data.data)
+    console.log(data.data)
   }
-  // Search Term Submission
   function sendForm(e) {
     let keyword = ''
     e.preventDefault()
     keyword = e.target.keyword.value
 
     setSearchTerm(keyword)
-    search(searchTerm)
   }
+
+  useEffect(() => {
+    getData()
+  }, [searchTerm])
 
   //Return
 
