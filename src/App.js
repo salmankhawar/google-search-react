@@ -15,17 +15,14 @@ function App() {
   // Functions
 
   async function getData() {
-    let data = await axios.get(
-      'https://project-google-search-api-demo.herokuapp.com/results',
-      {
-        params: {
-          search: searchTerm,
-        },
-      }
-    )
+    let data = await axios.get('http://localhost:4000/results', {
+      params: {
+        search: searchTerm,
+      },
+    })
     setResults(data.data)
-    console.log(data.data)
   }
+
   function sendForm(e) {
     let keyword = ''
     e.preventDefault()
