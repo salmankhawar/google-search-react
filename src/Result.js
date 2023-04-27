@@ -7,13 +7,14 @@ export default function Result({ element, i }) {
       </a>
       <p>{element.description}</p>
       <ul>
-        {element.links.map((link, x) => (
-          <li key={x}>
-            <a href={link.url} target="_blank">
-              {link.title}
-            </a>
-          </li>
-        ))}
+        {element.links &&
+          element.links.map((link, x) => (
+            <li key={x}>
+              <a href={link.url} target="_blank">
+                {link.title}
+              </a>
+            </li>
+          ))}
       </ul>
     </div>
   )
