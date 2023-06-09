@@ -4,8 +4,8 @@ import Results from './Results'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-// axios.defaults.withCredentials = true
-
+const API_URL = process.env.REACT_APP_API_URL
+console.log(API_URL)
 function App() {
   // States
 
@@ -15,7 +15,7 @@ function App() {
   // Functions
 
   async function getData() {
-    let data = await axios.get('http://localhost:4000/results', {
+    let data = await axios.get(`${API_URL}/results`, {
       params: {
         search: searchTerm,
       },
